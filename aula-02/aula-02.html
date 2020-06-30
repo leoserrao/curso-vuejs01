@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>VueJS Curso Completo</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p> Curso: {{ curso }} | Intrutor: {{instrutor()}} </p>
+        
+    </div>
+
+    <script type="text/javascript">
+        new Vue({
+	        el: '#app',
+            data: {
+  	            curso: 'Vue JS'
+            },
+            methods: {
+  	            instrutor: function(){
+    	        return "Léo Serrão";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

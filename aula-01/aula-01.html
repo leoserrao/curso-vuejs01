@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>VueJS Curso Completo</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{ mensagem }}</p>
+        <p> Meu nome é: {{ nome }}  </p>
+        <input v-on:input="mudarNome">
+    </div>
+
+    <script type="text/javascript">
+        new Vue({
+	        el: '#app',
+            data: {
+  	            mensagem: 'Olá Vue JS',
+                nome: ''
+            },
+            methods: {
+  	            mudarNome: function(event){
+    	        this.nome = event.target.value;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
